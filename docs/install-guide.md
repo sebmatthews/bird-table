@@ -4,7 +4,7 @@ Status: draft, 5 October 2026. Written for presenters setting up a Mac to run th
 
 ## What You Need
 
-A Mac with an Apple silicon chip (M1 or later), an internet connection for the setup, and about half an hour. You do not need to be an engineer. Every command below is typed, or pasted, into the Terminal app exactly as shown.
+A Mac with an Apple silicon chip (M1 or later) running macOS 15 (Sequoia) or later, an internet connection for the setup, and about half an hour. You do not need to be an engineer. Every command below is typed, or pasted, into the Terminal app exactly as shown.
 
 You do not need a GitHub account: the demo's code is public, and nothing in the demo is sent back to GitHub. You do need a Cosine account, for the coding agent.
 
@@ -51,11 +51,11 @@ Not decided yet. Every presenter must use exactly the same model setup that was 
 
 In Terminal:
 
-    git clone https://github.com/sebmatthews/bird-table.git
+    git clone https://github.com/OWNER/bird-table.git
     cd bird-table
     npm install
 
-This makes a folder called bird-table in your home folder and installs what the picture needs. Whenever you run the demo, open Terminal and go into it first with `cd bird-table`.
+Replace OWNER with the GitHub account or organisation that holds the demo, as given to you by the demo's owner. This makes a folder called bird-table in your home folder and installs what the picture needs. Whenever you run the demo, open Terminal and go into it first with `cd bird-table`.
 
 ## Step 7: Check Everything Is Ready
 

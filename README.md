@@ -26,6 +26,7 @@ Live reloading is off, so the page changes only when it is reloaded.
 | `docs/demo-guide.md` | Presenters: the script, what to show and say, and what to do if something goes wrong |
 | `docs/install-guide.md` | Presenters: setting up a Mac, once |
 | `docs/admin-guide.md` | The demo's owner: changing the demo, saving a backup, tidying up |
+| `docs/handoff-guide.md` | Setting up your own, independent copy of the demo, and the licence |
 
 ## Running It
 
@@ -88,8 +89,10 @@ The picture shows when a danger area is live, but it does not warn anyone when a
 
 Map data © OpenStreetMap contributors, available under the Open Database Licence (ODbL). Borders from Natural Earth (public domain). See `map/data/SOURCES.md`.
 
-## Copyright
+## Copyright and Licence
 
-Copyright 2026 Seb Matthews. All rights reserved. No licence is granted by the publication of this repository.
+Copyright © 2026 the copyright holder. All rights reserved, except as granted below.
 
-The map data in `map/data/` is not covered by this notice. It is derived from OpenStreetMap and is available under the Open Database Licence, as `map/data/SOURCES.md` sets out.
+The copyright holder grants Cosine, and its employees, contractors and agents, a perpetual, irrevocable, worldwide, royalty-free, non-exclusive licence to use, run, copy, modify, adapt, distribute, sublicense and otherwise exploit this demo and everything in it, including for commercial purposes, without restriction and without any obligation to the copyright holder. The demo is provided as is, without warranty of any kind.
+
+The map data in `map/data` is not covered by this grant, because it is not the copyright holder's to grant. It is derived from OpenStreetMap and is available under the Open Database Licence (ODbL): it must keep the credit '© OpenStreetMap contributors' and say that the data is available under the ODbL, and versions of it that you change and share must be shared under the same licence. The national borders come from Natural Earth, which is in the public domain. `map/data/SOURCES.md` sets this out.

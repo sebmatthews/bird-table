@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Rebuilds the map data in map/data from source downloads.
-# Not run during the demo. Run by Seb or a session when the map needs rebuilding.
+# Not run during the demo. Run it when the map needs rebuilding.
 #
 # Sources (download into a working folder outside the repository first):
 #   estonia-latest-free.shp.zip  https://download.geofabrik.de/europe/estonia-latest-free.shp.zip  (unzip into est/)
