@@ -8,6 +8,7 @@ import { positionAt, type Unit } from './scenario';
 export class UnitLayer {
   private markers = new Map<string, L.Marker>();
   private ring = L.circleMarker([0, 0], { interactive: false, fill: false, weight: 2, dashArray: '3 3', color: STYLE.selected.colour });
+  private alertRings = new Map<string, L.CircleMarker>();
   selected: Unit | null = null;
 
   constructor(private map: L.Map, private units: Unit[], onSelect: (unit: Unit) => void) {
@@ -40,11 +41,23 @@ export class UnitLayer {
     }
   }
 
+  /** Put a red ring round each unit in the set, and take it off every other unit. */
+  setAlerts(unitIds: Set<string>): void {
+    for (const [id, ring] of this.alertRings) if (!unitIds.has(id)) { ring.remove(); this.alertRings.delete(id); }
+    for (const id of unitIds) if (!this.alertRings.has(id))
+      this.alertRings.set(id, L.circleMarker([0, 0], { interactive: false, fill: false, weight: 3, color: STYLE.alert.colour }).addTo(this.map));
+  }
+
   /** Move every unit to where it is at the given exercise time. */
   update(mins: number): void {
     for (const unit of this.units) {
       const [e, n] = positionAt(unit, mins);
       this.markers.get(unit.id)!.setLatLng(at(e, n));
+    }
+    for (const [id, ring] of this.alertRings) {
+      const unit = this.units.find((u) => u.id === id)!;
+      const [e, n] = positionAt(unit, mins);
+      ring.setLatLng(at(e, n)).setRadius(this.size() * 0.9);
     }
     if (this.selected) {
       const [e, n] = positionAt(this.selected, mins);

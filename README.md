@@ -66,6 +66,7 @@ TypeScript with Vite, Leaflet for the map, milsymbol for the NATO (North Atlanti
 | `src/grid.ts` | Conversion to UTM (Universal Transverse Mercator) zone 35 and grid references |
 | `src/scenario.ts` | The scenario's types, unit positions over time, danger area timing, and the point-in-shape test |
 | `src/clock.ts` | The exercise clock |
+| `src/rangeSafety.ts` | Range safety: units inside a live danger area, and the alerts |
 | `src/timeline.ts` | The timeline under the map: play, scrub, event ticks and live windows |
 | `src/units.ts` | Units on the map and selection |
 | `src/dangerAreas.ts` | Range danger areas, shown live or cold |
@@ -81,9 +82,9 @@ TypeScript with Vite, Leaflet for the map, milsymbol for the NATO (North Atlanti
 
 Positions throughout are kilometres of easting and northing in UTM zone 35, the grid the map is drawn on.
 
-## Known Gaps
+## Range Safety
 
-The picture shows when a danger area is live, but it does not warn anyone when a unit enters a live danger area.
+When a unit enters a danger area while it is live, an alert appears in the event log, the unit gets a red ring, and the area turns red. `src/rangeSafety.ts` works this out from exercise time, so replaying or scrubbing gives the same alerts. This branch is the finished version kept for use if a live run fails.
 
 ## Map Data
 

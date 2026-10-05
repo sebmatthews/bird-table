@@ -11,6 +11,7 @@ import { DangerAreaLayer } from './dangerAreas';
 import { EventLog } from './eventLog';
 import { UnitDetails } from './details';
 import { Timeline } from './timeline';
+import { alertsForDay, breachesAt } from './rangeSafety';
 import { JUMP_TO } from './config';
 
 const $ = (id: string) => document.getElementById(id)!;
@@ -19,7 +20,7 @@ async function start(): Promise<void> {
   const [map, scenario] = await Promise.all([createMap($('map')), loadScenario()]);
   const clock = new ExerciseClock(scenario.start, scenario.end);
   const dangerAreas = new DangerAreaLayer(map, scenario.dangerAreas);
-  const log = new EventLog($('log'), scenario.events);
+  const log = new EventLog($('log'), scenario.events, alertsForDay(scenario, clock.start, clock.end));
   const details = new UnitDetails($('details'));
   const units = new UnitLayer(map, scenario.units, (unit: Unit) => details.update(unit, clock.now));
 
@@ -40,8 +41,10 @@ async function start(): Promise<void> {
   const frame = (time: number) => {
     clock.tick((time - last) / 1000);
     last = time;
+    const breaches = breachesAt(scenario, clock.now);
+    units.setAlerts(new Set(breaches.map((b) => b.unit.id)));
     units.update(clock.now);
-    dangerAreas.update(clock.now);
+    dangerAreas.update(clock.now, new Set(breaches.map((b) => b.area.id)));
     log.update(clock.now);
     details.update(units.selected, clock.now);
     timeline.update();

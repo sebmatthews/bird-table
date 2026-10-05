@@ -26,6 +26,7 @@ export const STYLE = {
   },
   units: { size: 14, refZoom: 2, scale: 0.5, min: 10, max: 44, labelsFromZoom: 4.75 },
   selected: { colour: '#7fd6ff' },
+  alert: { colour: '#ff3b3b' },
 };
 
 /** Zoom level from which the exercise area is drawn at full detail. */
