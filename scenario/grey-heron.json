@@ -1,0 +1,1232 @@
+{
+ "name": "Exercise GREY HERON",
+ "version": 3,
+ "note": "Fictional exercise scenario for the Bird Table demo. Units, names and events are invented. The ground and military areas are real, from OpenStreetMap. The danger area is drawn by Bird Table around the real target areas 1 and 2.",
+ "crs": "UTM zone 35 (WGS84), kilometres: e = easting, n = northing",
+ "start": "06:00",
+ "end": "12:00",
+ "realSeconds": 120,
+ "area": {
+  "e0": 400,
+  "e1": 470,
+  "n0": 6540,
+  "n1": 6590,
+  "square": "35V MF"
+ },
+ "dangerAreas": [
+  {
+   "id": "DA1",
+   "label": "DANGER AREA 1",
+   "basedOn": "Sihtmärgialad 1 & 2 grown outwards by 2.2 km",
+   "areaKm2": 37.6,
+   "polygon": [
+    [
+     429.607,
+     6580.992
+    ],
+    [
+     429.682,
+     6580.423
+    ],
+    [
+     429.902,
+     6579.892
+    ],
+    [
+     430.251,
+     6579.436
+    ],
+    [
+     430.707,
+     6579.087
+    ],
+    [
+     431.327,
+     6578.677
+    ],
+    [
+     431.375,
+     6578.651
+    ],
+    [
+     431.905,
+     6578.432
+    ],
+    [
+     432.126,
+     6578.376
+    ],
+    [
+     432.36,
+     6578.331
+    ],
+    [
+     432.929,
+     6578.256
+    ],
+    [
+     433.022,
+     6578.259
+    ],
+    [
+     433.592,
+     6578.334
+    ],
+    [
+     433.655,
+     6578.35
+    ],
+    [
+     434.185,
+     6578.569
+    ],
+    [
+     434.439,
+     6578.717
+    ],
+    [
+     434.895,
+     6579.067
+    ],
+    [
+     436.106,
+     6580.283
+    ],
+    [
+     436.455,
+     6580.739
+    ],
+    [
+     436.501,
+     6580.832
+    ],
+    [
+     436.72,
+     6581.362
+    ],
+    [
+     436.795,
+     6581.932
+    ],
+    [
+     436.72,
+     6582.501
+    ],
+    [
+     436.711,
+     6582.527
+    ],
+    [
+     436.491,
+     6583.058
+    ],
+    [
+     435.825,
+     6584.046
+    ],
+    [
+     435.476,
+     6584.502
+    ],
+    [
+     435.02,
+     6584.851
+    ],
+    [
+     434.489,
+     6585.071
+    ],
+    [
+     433.92,
+     6585.146
+    ],
+    [
+     433.518,
+     6585.135
+    ],
+    [
+     433.244,
+     6585.119
+    ],
+    [
+     432.675,
+     6585.044
+    ],
+    [
+     432.628,
+     6585.032
+    ],
+    [
+     432.097,
+     6584.813
+    ],
+    [
+     430.943,
+     6584.211
+    ],
+    [
+     430.487,
+     6583.861
+    ],
+    [
+     430.138,
+     6583.405
+    ],
+    [
+     430.019,
+     6583.21
+    ],
+    [
+     429.799,
+     6582.68
+    ],
+    [
+     429.724,
+     6582.11
+    ],
+    [
+     429.607,
+     6580.992
+    ]
+   ],
+   "live": [
+    [
+     "08:00",
+     "10:00"
+    ]
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "B1",
+   "side": "blue",
+   "name": "BDE HQ",
+   "sidc": "10031002181100000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 422,
+     "n": 6574.5
+    }
+   ],
+   "role": "Brigade headquarters, commanding the defence of Tapa"
+  },
+  {
+   "id": "B10",
+   "side": "blue",
+   "name": "1 INF BN HQ",
+   "sidc": "10031002161211000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 438,
+     "n": 6566
+    },
+    {
+     "t": "07:30",
+     "e": 441.5,
+     "n": 6564.5
+    }
+   ],
+   "role": "Battalion headquarters, defending south east of Tapa"
+  },
+  {
+   "id": "B11",
+   "side": "blue",
+   "name": "A COY 1 INF BN",
+   "sidc": "10031000151211000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 437,
+     "n": 6567.5
+    },
+    {
+     "t": "07:30",
+     "e": 444,
+     "n": 6567
+    }
+   ],
+   "role": "Defending south east of Tapa"
+  },
+  {
+   "id": "B12",
+   "side": "blue",
+   "name": "B COY 1 INF BN",
+   "sidc": "10031000151211000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 437.5,
+     "n": 6565
+    },
+    {
+     "t": "07:40",
+     "e": 445,
+     "n": 6563.5
+    }
+   ],
+   "role": "Defending south east of Tapa"
+  },
+  {
+   "id": "B13",
+   "side": "blue",
+   "name": "C COY 1 INF BN",
+   "sidc": "10031000151211000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 438.5,
+     "n": 6563
+    },
+    {
+     "t": "07:50",
+     "e": 443,
+     "n": 6560.5
+    }
+   ],
+   "role": "Defending south of Tapa"
+  },
+  {
+   "id": "B20",
+   "side": "blue",
+   "name": "2 INF BN HQ",
+   "sidc": "10031002161211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 441,
+     "n": 6573
+    },
+    {
+     "t": "08:10",
+     "e": 441,
+     "n": 6573
+    },
+    {
+     "t": "08:40",
+     "e": 438.5,
+     "n": 6574
+    }
+   ],
+   "role": "Battalion headquarters, defending north east of Tapa"
+  },
+  {
+   "id": "B21",
+   "side": "blue",
+   "name": "A COY 2 INF BN",
+   "sidc": "10031000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 441,
+     "n": 6574.5
+    },
+    {
+     "t": "07:30",
+     "e": 447,
+     "n": 6575.5
+    },
+    {
+     "t": "08:05",
+     "e": 447,
+     "n": 6575.5
+    },
+    {
+     "t": "08:40",
+     "e": 443,
+     "n": 6574.5
+    }
+   ],
+   "role": "Forward company north east of Tapa"
+  },
+  {
+   "id": "B22",
+   "side": "blue",
+   "name": "B COY 2 INF BN",
+   "sidc": "10031000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 426,
+     "n": 6584.5
+    },
+    {
+     "t": "10:15",
+     "e": 426,
+     "n": 6584.5
+    },
+    {
+     "t": "10:25",
+     "e": 430,
+     "n": 6583
+    },
+    {
+     "t": "10:45",
+     "e": 436,
+     "n": 6579.5
+    },
+    {
+     "t": "11:15",
+     "e": 439,
+     "n": 6576.5
+    }
+   ],
+   "role": "Brigade reserve, west of the Central Training Area"
+  },
+  {
+   "id": "B23",
+   "side": "blue",
+   "name": "C COY 2 INF BN",
+   "sidc": "10031000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 424,
+     "n": 6577
+    },
+    {
+     "t": "09:05",
+     "e": 424,
+     "n": 6577
+    },
+    {
+     "t": "09:20",
+     "e": 429.6,
+     "n": 6579.6
+    },
+    {
+     "t": "09:35",
+     "e": 433.5,
+     "n": 6578.9
+    },
+    {
+     "t": "10:00",
+     "e": 438.5,
+     "n": 6575.5
+    }
+   ],
+   "role": "Brigade reserve, near Aegviidu"
+  },
+  {
+   "id": "B30",
+   "side": "blue",
+   "name": "3 ARMD BN HQ",
+   "sidc": "10031002161205000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 436.5,
+     "n": 6589
+    },
+    {
+     "t": "08:20",
+     "e": 436.5,
+     "n": 6589
+    },
+    {
+     "t": "08:45",
+     "e": 438.5,
+     "n": 6585
+    },
+    {
+     "t": "09:30",
+     "e": 440,
+     "n": 6579
+    }
+   ],
+   "role": "Battalion headquarters, counter-attack force"
+  },
+  {
+   "id": "B31",
+   "side": "blue",
+   "name": "A SQN 3 ARMD BN",
+   "sidc": "10031000151205000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 434.5,
+     "n": 6587.8
+    },
+    {
+     "t": "08:22",
+     "e": 434.5,
+     "n": 6587.8
+    },
+    {
+     "t": "08:35",
+     "e": 434.8,
+     "n": 6584.8
+    },
+    {
+     "t": "08:50",
+     "e": 435.2,
+     "n": 6580.2
+    },
+    {
+     "t": "09:20",
+     "e": 440,
+     "n": 6577.5
+    }
+   ],
+   "role": "Counter-attack force"
+  },
+  {
+   "id": "B32",
+   "side": "blue",
+   "name": "B SQN 3 ARMD BN",
+   "sidc": "10031000151205000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 433,
+     "n": 6588.5
+    },
+    {
+     "t": "08:30",
+     "e": 433,
+     "n": 6588.5
+    },
+    {
+     "t": "08:45",
+     "e": 432.8,
+     "n": 6585
+    },
+    {
+     "t": "09:05",
+     "e": 433.6,
+     "n": 6579.4
+    },
+    {
+     "t": "09:35",
+     "e": 439.5,
+     "n": 6576
+    }
+   ],
+   "role": "Counter-attack force"
+  },
+  {
+   "id": "B33",
+   "side": "blue",
+   "name": "C SQN 3 ARMD BN",
+   "sidc": "10031000151205000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 437.8,
+     "n": 6588
+    },
+    {
+     "t": "08:25",
+     "e": 437.8,
+     "n": 6588
+    },
+    {
+     "t": "08:50",
+     "e": 439.2,
+     "n": 6583.5
+    },
+    {
+     "t": "09:30",
+     "e": 441.8,
+     "n": 6578.3
+    }
+   ],
+   "role": "Counter-attack force, eastern route"
+  },
+  {
+   "id": "B41",
+   "side": "blue",
+   "name": "1 TP RECCE",
+   "sidc": "10031000141213000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 444,
+     "n": 6580
+    },
+    {
+     "t": "07:00",
+     "e": 452,
+     "n": 6581
+    },
+    {
+     "t": "08:00",
+     "e": 449,
+     "n": 6582
+    },
+    {
+     "t": "09:00",
+     "e": 446,
+     "n": 6581
+    }
+   ],
+   "role": "Screen east of Tapa"
+  },
+  {
+   "id": "B42",
+   "side": "blue",
+   "name": "2 TP RECCE",
+   "sidc": "10031000141213000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 445,
+     "n": 6575
+    },
+    {
+     "t": "07:00",
+     "e": 453,
+     "n": 6574
+    },
+    {
+     "t": "08:15",
+     "e": 448.5,
+     "n": 6577.5
+    }
+   ],
+   "role": "Screen east of Tapa"
+  },
+  {
+   "id": "B43",
+   "side": "blue",
+   "name": "3 TP RECCE",
+   "sidc": "10031000141213000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 445,
+     "n": 6569
+    },
+    {
+     "t": "07:00",
+     "e": 452,
+     "n": 6567
+    },
+    {
+     "t": "09:00",
+     "e": 448,
+     "n": 6566
+    }
+   ],
+   "role": "Screen south east of Tapa"
+  },
+  {
+   "id": "B5",
+   "side": "blue",
+   "name": "1 FD REGT",
+   "sidc": "10031000161303000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 426,
+     "n": 6571
+    },
+    {
+     "t": "09:00",
+     "e": 426,
+     "n": 6571
+    },
+    {
+     "t": "09:30",
+     "e": 430,
+     "n": 6566.5
+    }
+   ],
+   "role": "Artillery support to the brigade"
+  },
+  {
+   "id": "B61",
+   "side": "blue",
+   "name": "1 TP ENGR",
+   "sidc": "10031000141407000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 437.4,
+     "n": 6586.6
+    },
+    {
+     "t": "08:20",
+     "e": 437.4,
+     "n": 6586.6
+    },
+    {
+     "t": "08:35",
+     "e": 435.6,
+     "n": 6583.2
+    },
+    {
+     "t": "08:50",
+     "e": 436.2,
+     "n": 6579.4
+    },
+    {
+     "t": "09:10",
+     "e": 439,
+     "n": 6577.6
+    }
+   ],
+   "role": "Route clearance for the counter-attack"
+  },
+  {
+   "id": "B62",
+   "side": "blue",
+   "name": "2 TP ENGR",
+   "sidc": "10031000141407000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 430.5,
+     "n": 6587.5
+    },
+    {
+     "t": "10:05",
+     "e": 430.5,
+     "n": 6587.5
+    },
+    {
+     "t": "10:20",
+     "e": 432.2,
+     "n": 6584.5
+    },
+    {
+     "t": "10:40",
+     "e": 435,
+     "n": 6579.3
+    },
+    {
+     "t": "11:00",
+     "e": 438.2,
+     "n": 6577.8
+    }
+   ],
+   "role": "Route clearance"
+  },
+  {
+   "id": "B7",
+   "side": "blue",
+   "name": "LOG BN",
+   "sidc": "10031000161600000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 418,
+     "n": 6575
+    },
+    {
+     "t": "10:00",
+     "e": 418,
+     "n": 6575
+    },
+    {
+     "t": "10:45",
+     "e": 425,
+     "n": 6571
+    }
+   ],
+   "role": "Supply and repair for the brigade"
+  },
+  {
+   "id": "R1",
+   "side": "red",
+   "name": "OPFOR HQ",
+   "sidc": "10061002181100000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 467,
+     "n": 6577
+    },
+    {
+     "t": "10:00",
+     "e": 460,
+     "n": 6577
+    }
+   ],
+   "role": "OPFOR brigade headquarters"
+  },
+  {
+   "id": "R10",
+   "side": "red",
+   "name": "OPFOR 1 MECH BN HQ",
+   "sidc": "10061002161211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 465,
+     "n": 6575
+    },
+    {
+     "t": "09:30",
+     "e": 455,
+     "n": 6573
+    }
+   ],
+   "role": "Battalion headquarters, advancing on Tapa from the east"
+  },
+  {
+   "id": "R11",
+   "side": "red",
+   "name": "1 COY 1 MECH BN",
+   "sidc": "10061000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 463,
+     "n": 6573.5
+    },
+    {
+     "t": "09:00",
+     "e": 453.5,
+     "n": 6571
+    },
+    {
+     "t": "11:00",
+     "e": 449.5,
+     "n": 6569.5
+    }
+   ],
+   "role": "Advancing on Tapa from the east"
+  },
+  {
+   "id": "R12",
+   "side": "red",
+   "name": "2 COY 1 MECH BN",
+   "sidc": "10061000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 464,
+     "n": 6571.5
+    },
+    {
+     "t": "09:30",
+     "e": 454,
+     "n": 6568.5
+    },
+    {
+     "t": "11:30",
+     "e": 450,
+     "n": 6567
+    }
+   ],
+   "role": "Advancing on Tapa from the east"
+  },
+  {
+   "id": "R13",
+   "side": "red",
+   "name": "3 COY 1 MECH BN",
+   "sidc": "10061000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 466,
+     "n": 6572.5
+    },
+    {
+     "t": "10:00",
+     "e": 457,
+     "n": 6570
+    }
+   ],
+   "role": "Advancing on Tapa from the east"
+  },
+  {
+   "id": "R20",
+   "side": "red",
+   "name": "OPFOR 2 MECH BN HQ",
+   "sidc": "10061002161211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 467,
+     "n": 6566
+    },
+    {
+     "t": "10:00",
+     "e": 458,
+     "n": 6563
+    }
+   ],
+   "role": "Battalion headquarters, advancing south of Tapa"
+  },
+  {
+   "id": "R21",
+   "side": "red",
+   "name": "1 COY 2 MECH BN",
+   "sidc": "10061000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 465,
+     "n": 6565
+    },
+    {
+     "t": "09:30",
+     "e": 455,
+     "n": 6562
+    },
+    {
+     "t": "11:30",
+     "e": 451,
+     "n": 6561
+    }
+   ],
+   "role": "Advancing south of Tapa"
+  },
+  {
+   "id": "R22",
+   "side": "red",
+   "name": "2 COY 2 MECH BN",
+   "sidc": "10061000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 466.5,
+     "n": 6563
+    },
+    {
+     "t": "10:00",
+     "e": 456,
+     "n": 6559.5
+    },
+    {
+     "t": "11:45",
+     "e": 452,
+     "n": 6558.5
+    }
+   ],
+   "role": "Advancing south of Tapa"
+  },
+  {
+   "id": "R23",
+   "side": "red",
+   "name": "3 COY 2 MECH BN",
+   "sidc": "10061000151211020000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 468,
+     "n": 6564.5
+    },
+    {
+     "t": "10:30",
+     "e": 459,
+     "n": 6561
+    }
+   ],
+   "role": "Advancing south of Tapa"
+  },
+  {
+   "id": "R30",
+   "side": "red",
+   "name": "OPFOR TK BN HQ",
+   "sidc": "10061002161205000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 462,
+     "n": 6582
+    },
+    {
+     "t": "08:30",
+     "e": 453,
+     "n": 6579
+    },
+    {
+     "t": "10:00",
+     "e": 448,
+     "n": 6578.5
+    }
+   ],
+   "role": "Battalion headquarters, OPFOR main effort"
+  },
+  {
+   "id": "R31",
+   "side": "red",
+   "name": "1 COY TK BN",
+   "sidc": "10061000151205000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 460,
+     "n": 6581
+    },
+    {
+     "t": "07:40",
+     "e": 451,
+     "n": 6578.5
+    },
+    {
+     "t": "08:10",
+     "e": 448,
+     "n": 6577
+    },
+    {
+     "t": "09:30",
+     "e": 443.5,
+     "n": 6577.5
+    }
+   ],
+   "role": "OPFOR main effort, breaking through north east of Tapa"
+  },
+  {
+   "id": "R32",
+   "side": "red",
+   "name": "2 COY TK BN",
+   "sidc": "10061000151205000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 461,
+     "n": 6583
+    },
+    {
+     "t": "07:50",
+     "e": 452,
+     "n": 6580.5
+    },
+    {
+     "t": "08:20",
+     "e": 448.5,
+     "n": 6579.5
+    },
+    {
+     "t": "09:40",
+     "e": 444.5,
+     "n": 6579.8
+    }
+   ],
+   "role": "OPFOR main effort, breaking through north east of Tapa"
+  },
+  {
+   "id": "R33",
+   "side": "red",
+   "name": "3 COY TK BN",
+   "sidc": "10061000151205000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 463,
+     "n": 6584
+    },
+    {
+     "t": "08:30",
+     "e": 453,
+     "n": 6582
+    },
+    {
+     "t": "10:00",
+     "e": 447.5,
+     "n": 6581.5
+    }
+   ],
+   "role": "OPFOR main effort, second echelon"
+  },
+  {
+   "id": "R41",
+   "side": "red",
+   "name": "1 PL OPFOR RECCE",
+   "sidc": "10061000141213000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 460,
+     "n": 6576
+    },
+    {
+     "t": "08:00",
+     "e": 451,
+     "n": 6575.5
+    },
+    {
+     "t": "09:30",
+     "e": 447,
+     "n": 6573
+    }
+   ],
+   "role": "Leading the OPFOR advance"
+  },
+  {
+   "id": "R42",
+   "side": "red",
+   "name": "2 PL OPFOR RECCE",
+   "sidc": "10061000141213000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 461,
+     "n": 6569
+    },
+    {
+     "t": "08:00",
+     "e": 452,
+     "n": 6567
+    },
+    {
+     "t": "09:30",
+     "e": 448,
+     "n": 6564.5
+    }
+   ],
+   "role": "Leading the OPFOR advance"
+  },
+  {
+   "id": "R5",
+   "side": "red",
+   "name": "OPFOR ARTY BN",
+   "sidc": "10061000161303000000",
+   "route": [
+    {
+     "t": "06:00",
+     "e": 469,
+     "n": 6578
+    },
+    {
+     "t": "10:00",
+     "e": 465,
+     "n": 6574
+    }
+   ],
+   "role": "Fire support to the OPFOR advance"
+  }
+ ],
+ "events": [
+  {
+   "t": "06:00",
+   "from": "EXCON",
+   "to": "ALL",
+   "text": "Exercise GREY HERON starts. Blue brigade defends Tapa against OPFOR advancing from the east. Danger Area 1 in the Central Training Area is cold."
+  },
+  {
+   "t": "06:30",
+   "from": "1 TP RECCE",
+   "to": "BDE HQ",
+   "text": "OPFOR reconnaissance, two platoons, moving west from Vinni along the Rakvere road at 35V MF 5800 7600."
+  },
+  {
+   "t": "07:15",
+   "from": "2 TP RECCE",
+   "to": "BDE HQ",
+   "text": "OPFOR tank battalion, three companies, moving west north of Kadrina. Lead elements at 35V MF 5300 7900. Assessed as the OPFOR main effort."
+  },
+  {
+   "t": "07:45",
+   "from": "RANGE CONTROL",
+   "to": "ALL",
+   "text": "Danger Area 1, target areas 1 and 2 and 2.2 km around them, will be live 0800 to 1000 for an artillery firing serial. All units keep clear."
+  },
+  {
+   "t": "08:00",
+   "from": "RANGE CONTROL",
+   "to": "ALL",
+   "text": "Danger Area 1 now LIVE. Firing serial in progress."
+  },
+  {
+   "t": "08:10",
+   "from": "A COY 2 INF BN",
+   "to": "2 INF BN HQ",
+   "text": "Contact. OPFOR tanks, at least ten, breaking through our position north east of Tapa at 35V MF 4700 7550. Cannot hold."
+  },
+  {
+   "t": "08:15",
+   "from": "BDE HQ",
+   "to": "3 ARMD BN",
+   "text": "Counter-attack now to restore the position north east of Tapa. Fastest route is south through the Central Training Area. Expect contact by 0930."
+  },
+  {
+   "t": "08:20",
+   "from": "3 ARMD BN",
+   "to": "1 TP ENGR",
+   "text": "Clear and mark the route south through the Central Training Area ahead of A and B Squadrons. C Squadron to go east by the Kadrina road."
+  },
+  {
+   "t": "08:40",
+   "from": "2 INF BN HQ",
+   "to": "BDE HQ",
+   "text": "A Company falling back towards Tapa, still in contact. Two vehicles lost."
+  },
+  {
+   "t": "09:05",
+   "from": "BDE HQ",
+   "to": "2 INF BN",
+   "text": "Send C Company from reserve near Aegviidu to block north of Tapa at 35V MF 3850 7550. Move now."
+  },
+  {
+   "t": "09:30",
+   "from": "3 ARMD BN",
+   "to": "BDE HQ",
+   "text": "A and B Squadrons in contact with the OPFOR tank battalion north of Tapa. Engaging."
+  },
+  {
+   "t": "09:45",
+   "from": "3 ARMD BN",
+   "to": "BDE HQ",
+   "text": "OPFOR tank battalion halted and withdrawing east. Position north east of Tapa restored."
+  },
+  {
+   "t": "10:00",
+   "from": "RANGE CONTROL",
+   "to": "ALL",
+   "text": "Firing serial complete. Danger Area 1 now COLD and open to movement."
+  },
+  {
+   "t": "10:15",
+   "from": "BDE HQ",
+   "to": "2 INF BN",
+   "text": "Move B Company through the Central Training Area to reinforce north of Tapa."
+  },
+  {
+   "t": "11:00",
+   "from": "1 INF BN HQ",
+   "to": "BDE HQ",
+   "text": "OPFOR mechanised battalions halted east of Tapa at 35V MF 5000 6800. No further advance."
+  },
+  {
+   "t": "12:00",
+   "from": "EXCON",
+   "to": "ALL",
+   "text": "ENDEX. Exercise GREY HERON complete."
+  }
+ ],
+ "checkedCrossings": [
+  {
+   "unit": "B COY 2 INF BN",
+   "enters": "10:25",
+   "leaves": "10:43",
+   "state": "cold"
+  },
+  {
+   "unit": "C COY 2 INF BN",
+   "enters": "09:22",
+   "leaves": "09:38",
+   "state": "LIVE"
+  },
+  {
+   "unit": "A SQN 3 ARMD BN",
+   "enters": "08:34",
+   "leaves": "08:53",
+   "state": "LIVE"
+  },
+  {
+   "unit": "B SQN 3 ARMD BN",
+   "enters": "08:44",
+   "leaves": "09:10",
+   "state": "LIVE"
+  },
+  {
+   "unit": "1 TP ENGR",
+   "enters": "08:32",
+   "leaves": "08:46",
+   "state": "LIVE"
+  },
+  {
+   "unit": "2 TP ENGR",
+   "enters": "10:18",
+   "leaves": "10:40",
+   "state": "cold"
+  }
+ ]
+}

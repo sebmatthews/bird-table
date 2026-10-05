@@ -1,0 +1,6 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[25.9627,59.2619]},"properties":{"name":"Tapa","fclass":"town","population":9448}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[26.1106,59.1614]},"properties":{"name":"Tamsalu","fclass":"town","population":2629}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[26.3617,59.3482]},"properties":{"name":"Rakvere","fclass":"town","population":16953}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[25.3293,59.3363]},"properties":{"name":"Kehra","fclass":"town","population":2641}}
+]}
