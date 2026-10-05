@@ -6,7 +6,7 @@ Everything about the exercise is invented: the units, their names, the story and
 
 ## Status
 
-Built: the picture, the work item for the coding agent (`prompts/range-safety.md`), the demo command, and a finished version of the work item on the `backup/range-safety` branch for use if a live run fails. Still to do: rehearsals and the presenter guide.
+Built: the picture, the work item for the coding agent (`prompts/range-safety.md`), the demo command, and a finished version of the work item on the `backup/range-safety` branch for use if a live run fails. Still to do: rehearsals.
 
 ## The Demo
 
@@ -18,6 +18,14 @@ Built: the picture, the work item for the coding agent (`prompts/range-safety.md
 6. `./demo.sh finish`.
 
 Live reloading is off, so the page changes only when it is reloaded.
+
+## Guides
+
+| Guide | For |
+|---|---|
+| `docs/demo-guide.md` | Presenters: the script, what to show and say, and what to do if something goes wrong |
+| `docs/install-guide.md` | Presenters: setting up a Mac, once |
+| `docs/admin-guide.md` | The demo's owner: changing the demo, saving a backup, tidying up |
 
 ## Running It
 
@@ -66,6 +74,7 @@ TypeScript with Vite, Leaflet for the map, milsymbol for the NATO (North Atlanti
 | `map/` | The map data, its sources, and the script that rebuilds it |
 | `tests/` | Tests |
 | `prompts/` | Work items for the coding agent |
+| `docs/` | The guides |
 | `demo.sh` | The demo command |
 | `AGENTS.md` | Standing notes for any coding agent |
 

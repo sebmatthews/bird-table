@@ -16,13 +16,25 @@ say()  { printf '%s\n' "$*"; }
 fail() { printf 'PROBLEM: %s\n' "$*" >&2; exit 1; }
 stamp() { date +%d%m-%H%M%S; }
 
+# A branch name not yet in use: the prefix and the time, with a number added if needed.
+new_branch() {
+  name="$1-$(stamp)"; n=2
+  while git rev-parse --verify --quiet "refs/heads/$name" >/dev/null; do name="$1-$(stamp)-$n"; n=$((n + 1)); done
+  printf '%s' "$name"
+}
+
+# Stop early, before changing any code, if something other than this demo's picture holds the port.
+port_free_or_ours() {
+  if ! server_running && curl -s -o /dev/null "http://localhost:$PORT/"; then
+    fail "something else is already using port $PORT, probably a picture started with npm run dev. Stop it (Ctrl+C in its Terminal window), then run this again"
+  fi
+}
+
 server_running() { [ -f "$STATE/vite.pid" ] && kill -0 "$(cat "$STATE/vite.pid")" 2>/dev/null; }
 
 start_server() {
   if server_running; then say "The picture is already running at http://localhost:$PORT"; return; fi
-  if curl -s -o /dev/null "http://localhost:$PORT/"; then
-    fail "something else is already using port $PORT, probably a picture started with npm run dev. Stop it (Ctrl+C in its Terminal window), then run this again"
-  fi
+  port_free_or_ours
   nohup node node_modules/vite/bin/vite.js --port "$PORT" --strictPort > "$STATE/vite.log" 2>&1 &
   echo $! > "$STATE/vite.pid"
   for _ in $(seq 1 30); do
@@ -31,6 +43,19 @@ start_server() {
     sleep 1
   done
   fail "the picture did not start. See $STATE/vite.log"
+}
+
+# Commit whatever the coding agent left on a demo branch, so a later start cannot wipe it.
+keep_run() {
+  current=$(git branch --show-current)
+  case "$current" in demo/*) ;; *) return ;; esac
+  if [ -n "$(git status --porcelain)" ]; then
+    git add -A
+    message="Coding agent's run, kept at the end of the run"
+    [ -n "${1:-}" ] && message="$1"
+    git -c user.name="Bird Table demo" -c user.email="demo@localhost" commit --quiet --no-verify -m "$message"
+    say "The coding agent's work is kept on $current"
+  fi
 }
 
 stop_server() {
@@ -43,7 +68,8 @@ case "${1:-}" in
     ok=1
     if command -v node >/dev/null; then
       v=$(node -p 'process.versions.node')
-      if node -e 'const [a,b]=process.versions.node.split(".").map(Number);process.exit(a>22||(a===22&&b>=12)?0:1)'; then say "Node $v: fine"; else say "Node $v: too old, 22.12 or later is needed"; ok=0; fi
+      # The test runner supports Node 22.12 or later on the 22 line, 24, and 26 or later; not 23 or 25.
+      if node -e 'const [a,b]=process.versions.node.split(".").map(Number);process.exit((a===22&&b>=12)||a===24||a>=26?0:1)'; then say "Node $v: fine"; else say "Node $v: not supported. Use 22.12 or later on the 22 line, 24, or 26 or later (brew install node)"; ok=0; fi
     else say "Node: not installed"; ok=0; fi
     if [ -d node_modules/vite ] && [ -d node_modules/leaflet ]; then say "Packages: installed"; else say "Packages: not installed. Run: npm install"; ok=0; fi
     if command -v git >/dev/null; then say "Git: fine"; else say "Git: not installed"; ok=0; fi
@@ -53,26 +79,26 @@ case "${1:-}" in
     [ "$ok" = 1 ] && say "Ready for a demo." || fail "fix the items above, then run ./demo.sh check again"
     ;;
   start)
+    port_free_or_ours
+    keep_run
     git switch --quiet --discard-changes main
     git clean -fdq -- src tests
-    branch="demo/live-$(stamp)"
+    branch=$(new_branch demo/live)
     git switch --quiet -c "$branch"
     say "Code reset to the saved before, on a fresh branch: $branch"
     start_server
     say "Ready. Show the before, then give the coding agent its line."
     ;;
   backup)
-    current=$(git branch --show-current)
-    if [ -n "$(git status --porcelain)" ]; then
-      git add -A
-      git -c user.name="Bird Table demo" -c user.email="demo@localhost" commit --quiet --no-verify -m "Coding agent's run, kept when the backup was put live"
-      say "The coding agent's work is kept on $current"
-    fi
-    git switch --quiet -c "demo/backup-$(stamp)" "$BACKUP_BRANCH" 2>/dev/null || git switch --quiet -c "demo/backup-$(stamp)" "origin/$BACKUP_BRANCH"
+    port_free_or_ours
+    keep_run "Coding agent's run, kept when the backup was put live"
+    branch=$(new_branch demo/backup)
+    git switch --quiet -c "$branch" "$BACKUP_BRANCH" 2>/dev/null || git switch --quiet -c "$branch" "origin/$BACKUP_BRANCH"
     start_server
     say "The finished version is live. Reload the page in the browser."
     ;;
   finish)
+    keep_run
     stop_server
     ;;
   *)
