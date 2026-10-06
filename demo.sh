@@ -3,7 +3,7 @@
 #   ./demo.sh check    once, after setting up a Mac: checks everything the demo needs
 #   ./demo.sh start    before each demo: resets the code to the saved before, starts a fresh run branch, opens the picture
 #   ./demo.sh backup   if the coding agent's run fails: keeps its work, puts the finished version live; then reload the page
-#   ./demo.sh finish   after the demo: stops the picture
+#   ./demo.sh finish   after the demo, once the page has been checked: keeps the run, stops the picture
 set -euo pipefail
 cd "$(dirname "$0")"
 

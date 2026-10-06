@@ -14,7 +14,7 @@ The same statement is in the repository's README.
 
 ## What the Demo Is
 
-Bird Table is a six-minute live demo of an AI coding agent, Cosine, adding a feature to a working military system. The system is a land common operating picture (COP: the shared map showing where every unit is) for Exercise GREY HERON, a fictional exercise on real ground in north-central Estonia. Its units, names, story and events are invented; the ground and the military areas are real, from OpenStreetMap.
+Bird Table is a short live demo of an AI coding agent, Cosine, adding a feature to a working military system. The system is a land common operating picture (COP: the shared map showing where every unit is) for Exercise GREY HERON, a fictional exercise on real ground in north-central Estonia. Its units, names, story and events are invented; the ground and the military areas are real, from OpenStreetMap.
 
 The picture shows a range danger area as live from 0800 to 1000, and during the morning four units drive into it. The picture says nothing. On stage, the presenter points Cosine at a written work item, and Cosine adds a range safety alert to the real code. When the same morning is replayed, every breach is caught: an alert in the event log, a red ring on the unit, and the area turning red. Two units that cross after the area goes cold raise no alert.
 
@@ -151,10 +151,10 @@ Live reloading is off, so the page changes only when you reload it, not every ti
 
         Carry out the brief in prompts/range-safety.md
 
-2. When Cosine has finished, check that `npm test` passes, reload the page, press J, and check the after as in Part 3.
-3. `./demo.sh finish`, and record the result, with the branch name `start` printed.
+2. When Cosine has finished, check that `npm test` passes, reload the page, press J, and check the after as in Part 3. Leave the picture running until you have looked: `finish` stops it.
+3. Only then, `./demo.sh finish`, and record the result, with the branch name `start` printed and how long Cosine took.
 
-Rehearse until the change succeeds reliably inside its time slot. A useful bar is nine successes in ten. If your Cosine set-up keeps memories between sessions, clear them before each rehearsal and each demo, so every run starts the same.
+Rehearse until the change succeeds reliably. A useful bar is nine successes in ten. How long Cosine takes varies with how busy the models are; allow for it rather than treating a slow run as a failure. If your Cosine set-up keeps memories between sessions, clear them before each rehearsal and each demo, so every run starts the same.
 
 The fallback you were given is a version of the work item built by hand. If you would rather show one of your own passing runs as the fallback, `docs/admin-guide.md` explains how to save it, with a check that stops before anything is overwritten.
 
@@ -162,19 +162,19 @@ The fallback you were given is a version of the work item built by hand. If you 
 
 The full script, with what to show and say in each part, is `docs/demo-guide.md`. The running order:
 
-| Time | Part |
+| Length | Part |
 | --- | --- |
-| 0:00 to 1:30 | The picture, and the gap |
-| 1:30 to 4:30 | The change, live: Cosine at work |
-| 4:30 to 6:00 | The same morning, replayed |
+| About 1.5 minutes | The picture, and the gap |
+| As long as Cosine takes | The change, live: Cosine at work, with the presenter talking through what is changing in its window |
+| About 1.5 minutes | The same morning, replayed |
 
 The presenter's steps:
 
 1. A few minutes before: `./demo.sh start`, and start Cosine in a second Terminal window.
 2. At the change: type `Carry out the brief in prompts/range-safety.md` into Cosine.
 3. When Cosine has finished: reload the page and replay the morning.
-4. If the run fails or runs out of time: `./demo.sh backup`, reload, and say 'let me show you the one we ran earlier'. Never debug live.
-5. Afterwards: `./demo.sh finish`.
+4. If the run fails: `./demo.sh backup`, reload, and say 'let me show you the one we ran earlier'. Never debug live.
+5. Only once the replay is over: `./demo.sh finish`.
 
 The work item Cosine reads is `prompts/range-safety.md`.
 

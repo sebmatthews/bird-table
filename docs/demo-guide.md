@@ -1,6 +1,6 @@
 # Demo Guide
 
-Status: draft, 5 October 2026. The script for the Bird Table demo: what to show and say in each part, and what to do if something goes wrong. It runs for about six minutes. The timings are a starting point and will be set in rehearsal. The whole exercise day plays in two minutes, so events come quickly: from 0825 the first alert is about two seconds away. Pause with space whenever you need to talk.
+Status: draft, 6 October 2026. The script for the Bird Table demo: what to show and say in each part, and what to do if something goes wrong. It runs for about three minutes plus however long the agent takes, which varies with how busy the models are; one rehearsal took about nine minutes. Allow for it. The whole exercise day plays in two minutes, so events come quickly: from 0825 the first alert is about two seconds away. Pause with space whenever you need to talk.
 
 ## The Story in One Breath
 
@@ -22,13 +22,13 @@ Useful keys in the picture: space pauses and plays, R restarts from 0600, J jump
 
 ## Running Order
 
-| Time | Part |
+| Length | Part |
 | --- | --- |
-| 0:00 to 1:30 | The picture, and the gap |
-| 1:30 to 4:30 | The change, live |
-| 4:30 to 6:00 | The same morning, replayed |
+| About 1.5 minutes | The picture, and the gap |
+| As long as the agent takes | The change, live |
+| About 1.5 minutes | The same morning, replayed |
 
-## The Picture, and the Gap (0:00 to 1:30)
+## The Picture, and the Gap (About 1.5 Minutes)
 
 Show: the picture as it opens, with the exercise clock running.
 
@@ -42,7 +42,7 @@ Say, as the engineers and the armoured squadrons drive into the orange area: 'Wa
 
 Press space to pause.
 
-## The Change, Live (1:30 to 4:30)
+## The Change, Live (As Long As the Agent Takes)
 
 Say: 'The fix has already been written down as a work item, the way a team would hand over a piece of work, so I just point the agent at it.'
 
@@ -50,11 +50,13 @@ In the Cosine window, type exactly this, the same words every time:
 
     Carry out the brief in prompts/range-safety.md
 
-While it works, say what it is doing as it does it: reading the work item and the code, finding the functions that already know where every unit is and when an area is live, writing a new range safety module and its tests, and wiring the alert into the event log and the map. Point out that it runs the tests before it finishes.
+While it works, point at whatever is changing in the Cosine window and say what it is doing as it does it: reading the work item and the code, finding the functions that already know where every unit is and when an area is live, writing a new range safety module and its tests, and wiring the alert into the event log and the map. Point out that it runs the tests before it finishes.
 
-When it has finished, show the list of files it changed and the tests passing.
+If it is taking its time, keep talking through what it is doing; that is part of the demo, not a problem. The fallback is for a run that fails, not a slow one.
 
-## The Same Morning, Replayed (4:30 to 6:00)
+When it has finished, show the list of files it changed and the tests passing. Leave the picture running: do not run `./demo.sh finish` yet.
+
+## The Same Morning, Replayed (About 1.5 Minutes)
 
 Reload the page in the browser. The picture starts again from 0600, with the agent's change in it.
 
@@ -64,19 +66,19 @@ Say: 'Same exercise, same units, same mistakes. This time the picture catches ev
 
 Then drag the timeline on past 1000, when the area goes cold, and let the two units that cross afterwards go through: 'And no false alarms. After 1000 the area is cold, and two more units cross it safely without a single alert.'
 
-Close: 'One work item, a few minutes of the agent's time, and a real safety gap closed in a real codebase, with tests to prove it.'
+Close: 'One work item, done by the agent, and a real safety gap closed in a real codebase, with tests to prove it.'
 
 ## Afterwards
 
-Run `./demo.sh finish`. It keeps whatever the agent did on this run's branch, as a record of the run, and stops the picture. The next `./demo.sh start` puts the code back to the before.
+Only once the replay is over, run `./demo.sh finish`. It keeps whatever the agent did on this run's branch, as a record of the run, and stops the picture. The next `./demo.sh start` puts the code back to the before.
 
 ## If Something Goes Wrong
 
 The rule: never debug live. Say 'let me show you the one we ran earlier', and move on.
 
-If the agent's run fails or runs out of time, run `./demo.sh backup` in Terminal. It keeps whatever the agent did on this run's branch, puts the finished version live, and tells you to reload the page. Then carry on with the replay as above.
+If the agent's run fails, run `./demo.sh backup` in Terminal. It keeps whatever the agent did on this run's branch, puts the finished version live, and tells you to reload the page. Then carry on with the replay as above.
 
-If the picture will not start, `./demo.sh start` says why. If something else is using its port, usually a picture started with `npm run dev`, stop that with Ctrl+C in its Terminal window and run `./demo.sh start` again. If `start` says the picture is already running, just reload the browser.
+If the picture will not start, `./demo.sh start` says why. If something else is using its port, usually a picture started with `npm run dev`, stop that with Ctrl+C in its Terminal window and run `./demo.sh start` again. If `start` says the picture is already running, just reload the browser. If the picture has stopped because `finish` was run too early, `npm run dev` shows it again with the agent's work in it; stop it with Ctrl+C before the next `./demo.sh start`.
 
 ## Shallow and Deep Versions
 
