@@ -1,6 +1,6 @@
 # Install Guide
 
-Status: draft, 5 October 2026. Written for presenters setting up a Mac to run the Bird Table demo. In the demo, an AI coding agent adds a range safety alert to a military common operating picture. Facts about outside products are labelled confirmed (with where and when they were checked), or unconfirmed.
+Status: version 1.0, 6 October 2026. Written for presenters setting up a Mac to run the Bird Table demo. In the demo, an AI coding agent adds a range safety alert to a military common operating picture. Facts about outside products are labelled confirmed (with where and when they were checked), or unconfirmed.
 
 ## What You Need
 

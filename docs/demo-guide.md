@@ -1,6 +1,6 @@
 # Demo Guide
 
-Status: draft, 6 October 2026. The script for the Bird Table demo: what to show and say in each part, and what to do if something goes wrong. It runs for about three minutes plus however long the agent takes, which varies with how busy the models are; one rehearsal took about nine minutes. Allow for it. The whole exercise day plays in two minutes, so events come quickly: from 0825 the first alert is about two seconds away. Pause with space whenever you need to talk.
+Status: version 1.0, 6 October 2026. The script for the Bird Table demo: what to show and say in each part, and what to do if something goes wrong. It runs for about three minutes plus however long the agent takes, which varies with how busy the models are; one rehearsal took about nine minutes. Allow for it. The whole exercise day plays in two minutes, so events come quickly: from 0825 the first alert is about two seconds away. Pause with space whenever you need to talk.
 
 ## The Story in One Breath
 

@@ -1,6 +1,6 @@
 # Bird Table Handoff Guide
 
-Status: draft, 5 October 2026. For a Cosine user setting up their own, fully independent copy of the Bird Table demo and running it.
+Status: version 1.0, 6 October 2026. For a Cosine user setting up their own, fully independent copy of the Bird Table demo and running it.
 
 ## Licence
 

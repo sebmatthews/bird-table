@@ -1,6 +1,6 @@
 # Admin Guide
 
-Status: draft, 5 October 2026. For the demo's owner: the one-off and occasional steps behind the demo, which presenters never do. Presenters follow the install guide and the demo guide only.
+Status: version 1.0, 6 October 2026. For the demo's owner: the one-off and occasional steps behind the demo, which presenters never do. Presenters follow the install guide and the demo guide only.
 
 ## How the Pieces Fit
 
